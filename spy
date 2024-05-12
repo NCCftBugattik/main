@@ -1,4 +1,4 @@
-print("13.2")
+print("13.3")
 
 --[[
     SimpleSpy v2.2 SOURCE
@@ -2204,32 +2204,6 @@ end
 function toggleSpyMethod()
 	toggleSpy()
 	toggle = not toggle
-end
-
---- Shuts down the remote spy
-function shutdown()
-	if schedulerconnect then
-		schedulerconnect:Disconnect()
-	end
-	for _, connection in pairs(connections) do
-		coroutine.wrap(function()
-			connection:Disconnect()
-		end)()
-	end
-	SimpleSpy2:Destroy()
-	hookfunction(remoteEvent.FireServer, originalEvent)
-	hookfunction(remoteFunction.InvokeServer, originalFunction)
-	if hookmetamethod then
-		if original then
-			hookmetamethod(game, "__namecall", original)
-		end
-	else
-		gm = gm or getrawmetatable(game)
-		setreadonly(gm, false)
-		gm.__namecall = original
-		setreadonly(gm, true)
-	end
-	_G.SimpleSpyExecuted = false
 end
 
 -- main
