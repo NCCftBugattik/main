@@ -1,3 +1,5 @@
+print("13.1")
+
 --[[
     SimpleSpy v2.2 SOURCE
 
@@ -2582,5 +2584,3 @@ end, function()
 		codebox:setRaw(SimpleSpy:ValueToVar(selected.ReturnValue, "returnValue"))
 	end
 end)
-
-print("13.1")
