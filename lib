@@ -1,4 +1,4 @@
-local Library = {}
+local Kavo = {}
 
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
@@ -7,7 +7,7 @@ local run = game:GetService("RunService")
 
 local Utility = {}
 local Objects = {}
-function Library:DraggingEnabled(frame, parent)
+function Kavo:DraggingEnabled(frame, parent)
         
     parent = parent or frame
     
@@ -126,7 +126,7 @@ local SettingsT = {
 
 }
 
-local Name = "LibraryConfig.JSON"
+local Name = "KavoConfig.JSON"
 
 pcall(function()
 
@@ -137,12 +137,17 @@ end
 Settings = game:service'HttpService':JSONEncode(readfile(Name))
 end)
 
-local LibName = "Library"
+local LibName = tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
 
-function Library:ToggleUI()
-    game.CoreGui[LibName].Enabled = not game.CoreGui[LibName].Enabled
+function Kavo:ToggleUI()
+    if game.CoreGui[LibName].Enabled then
+        game.CoreGui[LibName].Enabled = false
+    else
+        game.CoreGui[LibName].Enabled = true
+    end
+end
 
-function Library.CreateLib(kavName, themeList)
+function Kavo.CreateLib(kavName, themeList)
     if not themeList then
         themeList = themes
     end
@@ -181,7 +186,7 @@ function Library.CreateLib(kavName, themeList)
     themeList = themeList or {}
     local selectedTab 
     kavName = kavName or "Library"
-    table.insert(Library, kavName)
+    table.insert(Kavo, kavName)
     for i,v in pairs(game.CoreGui:GetChildren()) do
         if v:IsA("ScreenGui") and v.Name == kavName then
             v:Destroy()
@@ -206,7 +211,7 @@ function Library.CreateLib(kavName, themeList)
 
     local blurFrame = Instance.new("Frame")
 
-    Library:DraggingEnabled(MainHeader, Main)
+    Kavo:DraggingEnabled(MainHeader, Main)
 
     blurFrame.Name = "blurFrame"
     blurFrame.Parent = pages
@@ -347,7 +352,7 @@ function Library.CreateLib(kavName, themeList)
         end
     end)()
 
-    function Library:ChangeColor(prope,color)
+    function Kavo:ChangeColor(prope,color)
         if prope == "Background" then
             themeList.Background = color
         elseif prope == "SchemeColor" then
@@ -2637,4 +2642,4 @@ function Library.CreateLib(kavName, themeList)
     end  
     return Tabs
 end
-return Library
+return Kavo
