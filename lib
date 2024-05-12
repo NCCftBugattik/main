@@ -455,14 +455,14 @@ function Library.CreateLib(kavName, themeList)
         local focusing = false
         local viewDe = false
 
-        -- coroutine.wrap(function()
-        --     while wait() do
-        --         page.BackgroundColor3 = themeList.Background
-        --         page.ScrollBarImageColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 16, themeList.SchemeColor.g * 255 - 15, themeList.SchemeColor.b * 255 - 28)
-        --         tabButton.TextColor3 = themeList.TextColor
-        --         tabButton.BackgroundColor3 = themeList.SchemeColor
-        --     end
-        -- end)()
+        coroutine.wrap(function()
+            while wait() do
+                page.BackgroundColor3 = themeList.Background
+                page.ScrollBarImageColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 16, themeList.SchemeColor.g * 255 - 15, themeList.SchemeColor.b * 255 - 28)
+                tabButton.TextColor3 = themeList.TextColor
+                tabButton.BackgroundColor3 = themeList.SchemeColor
+            end
+        end)()
     
         function Sections:NewSection(secName, hidden)
             secName = secName or "Section"
@@ -549,15 +549,15 @@ function Library.CreateLib(kavName, themeList)
             sectionElListing.Padding = UDim.new(0, 3)
 
             
-        -- coroutine.wrap(function()
-        --     while wait() do
-        --         sectionFrame.BackgroundColor3 = themeList.Background
-        --         sectionHead.BackgroundColor3 = themeList.SchemeColor
-        --         tabButton.TextColor3 = themeList.TextColor
-        --         tabButton.BackgroundColor3 = themeList.SchemeColor
-        --         sectionName.TextColor3 = themeList.TextColor
-        --     end
-        -- end)()
+        coroutine.wrap(function()
+            while wait() do
+                sectionFrame.BackgroundColor3 = themeList.Background
+                sectionHead.BackgroundColor3 = themeList.SchemeColor
+                tabButton.TextColor3 = themeList.TextColor
+                tabButton.BackgroundColor3 = themeList.SchemeColor
+                sectionName.TextColor3 = themeList.TextColor
+            end
+        end)()
 
             local function updateSectionFrame()
                 local innerSc = sectionElListing.AbsoluteContentSize
@@ -749,19 +749,19 @@ function Library.CreateLib(kavName, themeList)
                         viewDe = false
                     end
                 end)
-                -- coroutine.wrap(function()
-                --     while wait() do
-                --         if not hovering then
-                --             buttonElement.BackgroundColor3 = themeList.ElementColor
-                --         end
-                --         viewInfo.ImageColor3 = themeList.SchemeColor
-                --         Sample.ImageColor3 = themeList.SchemeColor
-                --         moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
-                --         moreInfo.TextColor3 = themeList.TextColor
-                --         touch.ImageColor3 = themeList.SchemeColor
-                --         btnInfo.TextColor3 = themeList.TextColor
-                --     end
-                -- end)()
+                coroutine.wrap(function()
+                    while wait() do
+                        if not hovering then
+                            buttonElement.BackgroundColor3 = themeList.ElementColor
+                        end
+                        viewInfo.ImageColor3 = themeList.SchemeColor
+                        Sample.ImageColor3 = themeList.SchemeColor
+                        moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
+                        moreInfo.TextColor3 = themeList.TextColor
+                        touch.ImageColor3 = themeList.SchemeColor
+                        btnInfo.TextColor3 = themeList.TextColor
+                    end
+                end)()
                 
                 function ButtonFunction:UpdateButton(newTitle)
                     btnInfo.Text = newTitle
@@ -948,21 +948,21 @@ function Library.CreateLib(kavName, themeList)
                         viewDe = false
                     end
                 end)
-                -- coroutine.wrap(function()
-                --     while wait() do
-                --         if not hovering then
-                --             textboxElement.BackgroundColor3 = themeList.ElementColor
-                --         end
-                --         TextBox.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r * 255 - 6, themeList.ElementColor.g * 255 - 6, themeList.ElementColor.b * 255 - 7)
-                --         viewInfo.ImageColor3 = themeList.SchemeColor
-                --         moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
-                --         moreInfo.TextColor3 = themeList.TextColor
-                --         write.ImageColor3 = themeList.SchemeColor
-                --         togName.TextColor3 = themeList.TextColor
-                --         TextBox.PlaceholderColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 19, themeList.SchemeColor.g * 255 - 26, themeList.SchemeColor.b * 255 - 35)
-                --         TextBox.TextColor3 = themeList.SchemeColor
-                --     end
-                -- end)()
+                coroutine.wrap(function()
+                    while wait() do
+                        if not hovering then
+                            textboxElement.BackgroundColor3 = themeList.ElementColor
+                        end
+                        TextBox.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r * 255 - 6, themeList.ElementColor.g * 255 - 6, themeList.ElementColor.b * 255 - 7)
+                        viewInfo.ImageColor3 = themeList.SchemeColor
+                        moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
+                        moreInfo.TextColor3 = themeList.TextColor
+                        write.ImageColor3 = themeList.SchemeColor
+                        togName.TextColor3 = themeList.TextColor
+                        TextBox.PlaceholderColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 19, themeList.SchemeColor.g * 255 - 26, themeList.SchemeColor.b * 255 - 35)
+                        TextBox.TextColor3 = themeList.SchemeColor
+                    end
+                end)()
             end 
 
                 function Elements:NewToggle(tname, nTip, callback)
@@ -1158,20 +1158,20 @@ function Library.CreateLib(kavName, themeList)
                         end
                     end)
 
-                    -- coroutine.wrap(function()
-                    --     while wait() do
-                    --         if not hovering then
-                    --             toggleElement.BackgroundColor3 = themeList.ElementColor
-                    --         end
-                    --         toggleDisabled.ImageColor3 = themeList.SchemeColor
-                    --         toggleEnabled.ImageColor3 = themeList.SchemeColor
-                    --         togName.TextColor3 = themeList.TextColor
-                    --         viewInfo.ImageColor3 = themeList.SchemeColor
-                    --         Sample.ImageColor3 = themeList.SchemeColor
-                    --         moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
-                    --         moreInfo.TextColor3 = themeList.TextColor
-                    --     end
-                    -- end)()
+                    coroutine.wrap(function()
+                        while wait() do
+                            if not hovering then
+                                toggleElement.BackgroundColor3 = themeList.ElementColor
+                            end
+                            toggleDisabled.ImageColor3 = themeList.SchemeColor
+                            toggleEnabled.ImageColor3 = themeList.SchemeColor
+                            togName.TextColor3 = themeList.TextColor
+                            viewInfo.ImageColor3 = themeList.SchemeColor
+                            Sample.ImageColor3 = themeList.SchemeColor
+                            moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
+                            moreInfo.TextColor3 = themeList.TextColor
+                        end
+                    end)()
                     viewInfo.MouseButton1Click:Connect(function()
                         if not viewDe then
                             viewDe = true
@@ -1378,21 +1378,21 @@ function Library.CreateLib(kavName, themeList)
                     end
                 end)        
 
-                -- coroutine.wrap(function()
-                --     while wait() do
-                --         if not hovering then
-                --             sliderElement.BackgroundColor3 = themeList.ElementColor
-                --         end
-                --         moreInfo.TextColor3 = themeList.TextColor
-                --         moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
-                --         val.TextColor3 = themeList.TextColor
-                --         write.ImageColor3 = themeList.SchemeColor
-                --         togName.TextColor3 = themeList.TextColor
-                --         viewInfo.ImageColor3 = themeList.SchemeColor
-                --         sliderBtn.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r * 255 + 5, themeList.ElementColor.g * 255 + 5, themeList.ElementColor.b * 255  + 5)
-                --         sliderDrag.BackgroundColor3 = themeList.SchemeColor
-                --     end
-                -- end)()
+                coroutine.wrap(function()
+                    while wait() do
+                        if not hovering then
+                            sliderElement.BackgroundColor3 = themeList.ElementColor
+                        end
+                        moreInfo.TextColor3 = themeList.TextColor
+                        moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
+                        val.TextColor3 = themeList.TextColor
+                        write.ImageColor3 = themeList.SchemeColor
+                        togName.TextColor3 = themeList.TextColor
+                        viewInfo.ImageColor3 = themeList.SchemeColor
+                        sliderBtn.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r * 255 + 5, themeList.ElementColor.g * 255 + 5, themeList.ElementColor.b * 255  + 5)
+                        sliderDrag.BackgroundColor3 = themeList.SchemeColor
+                    end
+                end)()
 
                 local Value
                 sliderBtn.MouseButton1Down:Connect(function()
@@ -1656,20 +1656,20 @@ function Library.CreateLib(kavName, themeList)
                         hovering = false
                     end
                 end)        
-                -- coroutine.wrap(function()
-                --     while wait() do
-                --         if not hovering then
-                --             dropOpen.BackgroundColor3 = themeList.ElementColor
-                --         end
-                --         Sample.ImageColor3 = themeList.SchemeColor
-                --         dropFrame.BackgroundColor3 = themeList.Background
-                --         listImg.ImageColor3 = themeList.SchemeColor
-                --         itemTextbox.TextColor3 = themeList.TextColor
-                --         viewInfo.ImageColor3 = themeList.SchemeColor
-                --         moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
-                --         moreInfo.TextColor3 = themeList.TextColor
-                --     end
-                -- end)()
+                coroutine.wrap(function()
+                    while wait() do
+                        if not hovering then
+                            dropOpen.BackgroundColor3 = themeList.ElementColor
+                        end
+                        Sample.ImageColor3 = themeList.SchemeColor
+                        dropFrame.BackgroundColor3 = themeList.Background
+                        listImg.ImageColor3 = themeList.SchemeColor
+                        itemTextbox.TextColor3 = themeList.TextColor
+                        viewInfo.ImageColor3 = themeList.SchemeColor
+                        moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
+                        moreInfo.TextColor3 = themeList.TextColor
+                    end
+                end)()
                 UICorner.CornerRadius = UDim.new(0, 4)
                 UICorner.Parent = moreInfo
 
@@ -1783,15 +1783,15 @@ function Library.CreateLib(kavName, themeList)
                             oHover = false
                         end
                     end)   
-                    -- coroutine.wrap(function()
-                    --     while wait() do
-                    --         if not oHover then
-                    --             optionSelect.BackgroundColor3 = themeList.ElementColor
-                    --         end
-                    --         optionSelect.TextColor3 = Color3.fromRGB(themeList.TextColor.r * 255 - 6, themeList.TextColor.g * 255 - 6, themeList.TextColor.b * 255 - 6)
-                    --         Sample1.ImageColor3 = themeList.SchemeColor
-                    --     end
-                    -- end)()
+                    coroutine.wrap(function()
+                        while wait() do
+                            if not oHover then
+                                optionSelect.BackgroundColor3 = themeList.ElementColor
+                            end
+                            optionSelect.TextColor3 = Color3.fromRGB(themeList.TextColor.r * 255 - 6, themeList.TextColor.g * 255 - 6, themeList.TextColor.b * 255 - 6)
+                            Sample1.ImageColor3 = themeList.SchemeColor
+                        end
+                    end)()
                 end
 
                 function DropFunction:Refresh(newList)
@@ -1882,15 +1882,15 @@ function Library.CreateLib(kavName, themeList)
                                 hov = false
                             end
                         end)   
-                        -- coroutine.wrap(function()
-                        --     while wait() do
-                        --         if not oHover then
-                        --             optionSelect.BackgroundColor3 = themeList.ElementColor
-                        --         end
-                        --         optionSelect.TextColor3 = Color3.fromRGB(themeList.TextColor.r * 255 - 6, themeList.TextColor.g * 255 - 6, themeList.TextColor.b * 255 - 6)
-                        --         Sample11.ImageColor3 = themeList.SchemeColor
-                        --     end
-                        -- end)()
+                        coroutine.wrap(function()
+                            while wait() do
+                                if not oHover then
+                                    optionSelect.BackgroundColor3 = themeList.ElementColor
+                                end
+                                optionSelect.TextColor3 = Color3.fromRGB(themeList.TextColor.r * 255 - 6, themeList.TextColor.g * 255 - 6, themeList.TextColor.b * 255 - 6)
+                                Sample11.ImageColor3 = themeList.SchemeColor
+                            end
+                        end)()
                     end
                     if opened then 
                         dropFrame:TweenSize(UDim2.new(0, 352, 0, UIListLayout.AbsoluteContentSize.Y), "InOut", "Linear", 0.08, true)
@@ -2101,22 +2101,22 @@ function Library.CreateLib(kavName, themeList)
                 togName_2.TextSize = 14.000
                 togName_2.TextXAlignment = Enum.TextXAlignment.Right   
 
-                -- coroutine.wrap(function()
-                --     while wait() do
-                --         if not oHover then
-                --             keybindElement.BackgroundColor3 = themeList.ElementColor
-                --         end
-                --         togName_2.TextColor3 = themeList.SchemeColor
-                --         touch.ImageColor3 = themeList.SchemeColor
-                --         viewInfo.ImageColor3 = themeList.SchemeColor
-                --         togName.BackgroundColor3 = themeList.TextColor
-                --         togName.TextColor3 = themeList.TextColor
-                --         Sample.ImageColor3 = themeList.SchemeColor
-                --         moreInfo.TextColor3 = themeList.TextColor
-                --         moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
+                coroutine.wrap(function()
+                    while wait() do
+                        if not oHover then
+                            keybindElement.BackgroundColor3 = themeList.ElementColor
+                        end
+                        togName_2.TextColor3 = themeList.SchemeColor
+                        touch.ImageColor3 = themeList.SchemeColor
+                        viewInfo.ImageColor3 = themeList.SchemeColor
+                        togName.BackgroundColor3 = themeList.TextColor
+                        togName.TextColor3 = themeList.TextColor
+                        Sample.ImageColor3 = themeList.SchemeColor
+                        moreInfo.TextColor3 = themeList.TextColor
+                        moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
 
-                --     end
-                -- end)()
+                    end
+                end)()
             end
 
             function Elements:NewColorPicker(colText, colInf, defcolor, callback)
@@ -2459,24 +2459,24 @@ function Library.CreateLib(kavName, themeList)
                 if themeList.SchemeColor == Color3.fromRGB(0,0,0) then
                     Utility:TweenObject(moreInfo, {TextColor3 = Color3.fromRGB(255,255,255)}, 0.2)
                 end 
-                -- coroutine.wrap(function()
-                --     while wait() do
-                --         if not hovering then
-                --             colorElement.BackgroundColor3 = themeList.ElementColor
-                --         end
-                --         touch.ImageColor3 = themeList.SchemeColor
-                --         colorHeader.BackgroundColor3 = themeList.ElementColor
-                --         togName.TextColor3 = themeList.TextColor
-                --         moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
-                --         moreInfo.TextColor3 = themeList.TextColor
-                --         viewInfo.ImageColor3 = themeList.SchemeColor
-                --         colorInners.BackgroundColor3 = themeList.ElementColor
-                --         toggleDisabled.ImageColor3 = themeList.SchemeColor
-                --         toggleEnabled.ImageColor3 = themeList.SchemeColor
-                --         togName_2.TextColor3 = themeList.TextColor
-                --         Sample.ImageColor3 = themeList.SchemeColor
-                --     end
-                -- end)()
+                coroutine.wrap(function()
+                    while wait() do
+                        if not hovering then
+                            colorElement.BackgroundColor3 = themeList.ElementColor
+                        end
+                        touch.ImageColor3 = themeList.SchemeColor
+                        colorHeader.BackgroundColor3 = themeList.ElementColor
+                        togName.TextColor3 = themeList.TextColor
+                        moreInfo.BackgroundColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 14, themeList.SchemeColor.g * 255 - 17, themeList.SchemeColor.b * 255 - 13)
+                        moreInfo.TextColor3 = themeList.TextColor
+                        viewInfo.ImageColor3 = themeList.SchemeColor
+                        colorInners.BackgroundColor3 = themeList.ElementColor
+                        toggleDisabled.ImageColor3 = themeList.SchemeColor
+                        toggleEnabled.ImageColor3 = themeList.SchemeColor
+                        togName_2.TextColor3 = themeList.TextColor
+                        Sample.ImageColor3 = themeList.SchemeColor
+                    end
+                end)()
                 updateSectionFrame()
                 UpdateSize()
                 local plr = game.Players.LocalPlayer
@@ -2616,12 +2616,12 @@ function Library.CreateLib(kavName, themeList)
 	                Utility:TweenObject(label, {TextColor3 = Color3.fromRGB(255,255,255)}, 0.2)
 	            end 
 
-		        -- coroutine.wrap(function()
-		        --     while wait() do
-		        --         label.BackgroundColor3 = themeList.SchemeColor
-		        --         label.TextColor3 = themeList.TextColor
-		        --     end
-		        -- end)()
+		        coroutine.wrap(function()
+		            while wait() do
+		                label.BackgroundColor3 = themeList.SchemeColor
+		                label.TextColor3 = themeList.TextColor
+		            end
+		        end)()
                 updateSectionFrame()
                 UpdateSize()
                 function labelFunctions:UpdateLabel(newText)
